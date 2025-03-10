@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&family=Rubik+Puddles&display=swap');
+@import url('reset.css');
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('fonts/CustomFont.woff2') format('woff2'),
+         url('fonts/CustomFont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* HEADER */
+header{
+    width: 100%;
+    border-bottom: 1px solid #999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vw 5wh;
+
+    position: absolute;
+    top:0; left:0;
+    z-index: 2;
+}
+
+header h1 a{
+    font : bold 24px/50px 'Moo Lah Lah';
+    color: #555;
+}
+
+header .btn_menu{
+    font-size: 24px;
+    color: #333;
+    display: none;
+}
+
+header #gnb {
+    display: flex;
+}
+
+header #gnb li{
+    margin: 0 20px;
+}
+
+header #gnb li a{
+    font : bold 16px/1px 'Rubik Puddles';
+    color: #555;
+    letter-spacing: 1px;    
+}
+
+header #sns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vh 5vw;
+    gap: 10px;
+}
+
+
+header #sns li a{
+    font-size: 16px;
+    color: #333;
+}
+
+
+/*BackGround Viedo */
+figure{
+    width: 100%;
+    height : 100vh;
+    position: absolute;
+    top: 0 ; left:0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+figure video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+figure .text{
+    position: absolute;
+    left: 6vw;
+    top:50%;
+    transform: translate(0, -50);
+}
+
+figure .text p{
+    font: normal 8vw/1 'Rubik Puddles';
+    color: rgb(218, 218, 218);
+}
+figure .text ul{
+    display: flex;
+    gap: 30px;
+    margin-top:30px;
+    color: whitesmoke;
+}
+figure .text ul li a i{
+    font-size: 20px;
+    color: whitesmoke;
+    margin-right: 10px;
+}
+
+figure .text ul li a strong{
+    font: normal 14px/1 'Moo Lah Lah';
+    color : whitesmoke;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0; left: 0;
+    font-size: 12px/1 'arial';
+    color: aliceblue;
+    letter-spacing: 2px;
+    z-index: 2;
+    padding: 5vh 5vw;
+}
+#snb{
+    display: none;
+}
+/* MOBILE */
+@media screen and (max-width: 968px){
+    header #gnb{
+        display : none;
+    }
+    header #sns{
+        display: none;
+    }
+    header .btn_menu{
+        display: block;
+    }
+    figure .text p {
+        font-size: 15vw;
+    }
+    
+    #snb{
+        display: block;
+    }
+    header #snb .sub_menu{
+        position: absolute;
+        padding: 10px 25px;
+        background-color: rgb(238, 255, 212);
+        border: 1px solid #999;
+        border-radius: 10px;
+        right: 5vw;
+        text-align: right;
+        visibility: visible;
+        opacity: 1;
+        transition-duration: 0.4s;
+    }
+    header #snb .sub_menu.hide{
+        visibility: hidden;
+        opacity: 0;
+    }
+    header #snb .sub_menu li{
+        padding: 10px 0px;
+        font: 16px/1 'arial';
+        color: #222;
+    }
+    header #snb .sub_menu li a i {
+        margin-left: 8px;
+
+    }
+}
